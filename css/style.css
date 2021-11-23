@@ -25,12 +25,13 @@
 
 html, body {
     font-family: 'Jost', sans-serif;
+    /* 1rem = 10px */
+    font-size: 62.5%;
 }
 
  /* Header: Dev_Quốc Kỳ  */
 
-
- /* Slider: Dev_Quốc Kỳ  */
+ /* Carousel: Dev_Văn Dũng  */
 
 
  /* About Us: Dev_Quốc Kỳ  */
@@ -42,16 +43,16 @@ html, body {
  /* Services: Dev_Quốc Kỳ  */
 
 
- /* Gallery: Dev_Quốc Kỳ  */
+ /* Gallery: Dev_Văn Dũng  */
 
 
- /* Slients: Dev_Quốc Kỳ  */
+ /* Slients: Dev_Văn Dũng  */
 
 
- /* Progress: Dev_Văn Dũng  */
+ /* Progress: Dev_Quốc Kỳ  */
 
 
- /* Testimonials: Dev_Văn Dũng  */
+ /* Testimonials: Dev_Quốc Kỳ  */
 
 
  /* Blog: Dev_Văn Dũng  */
