@@ -15,6 +15,9 @@
     --bg-grey: #f7f7f7;
     --bg-lightgrey: #f8f9fa;
     --layer: rgba(29, 42, 55, 0.7);
+    /* dark theme */
+    --bg-dark-color: #151421;
+    --heading-dark-color: #eee;
 }
 
 * {
@@ -29,8 +32,164 @@ html, body {
     font-size: 62.5%;
 }
 
- /* Header: Dev_Quốc Kỳ  */
+/* Light theme */
+#switchButton {
+    background-color: white;
+}
 
+#switchButton .fa-sun {
+    display: none;
+}
+
+#switchButton .fa-moon {
+    display: block;
+    color: var(--heading-color);
+}
+
+/* Dark Theme*/
+.dark#myBody {
+    background-color: var(--bg-dark-color);
+}
+
+
+.dark #switchButton .fa-sun {
+    display: block;
+    color: white;
+}
+
+.dark #switchButton .fa-moon {
+    display: none;
+}
+
+ /* Header: Dev_Quốc Kỳ  */
+.corpHeader {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    border-bottom: 1px solid rgba(231, 231, 231, 0.18);
+    display: grid;
+    align-items: center;
+    transition: all 0.4s ease 0s;
+    /* dùng cho currentColor để đổi màu navbar khi scroll */
+    color: #fff;
+}
+
+.dark .corpHeader {
+    /* dùng cho currentColor để đổi màu navbar khi scroll */
+    color: var(--bg-dark-color);
+}
+
+.corpHeader__brand .navbar-brand {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--heading-color);
+}
+
+.corpHeader__brand span:first-child i   {
+    color: var(--primary-color);
+}
+
+.corpHeader__brand span:last-child {
+    font-size: 1.4rem;  
+    display: block;
+    padding-left: 46px;
+    opacity: 0.9;
+}
+
+#corpNavbar li {
+    padding: 0 12px;
+}
+
+#corpNavbar a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.corpHeader .corpHeader__wrap .active .corpHeader__link {
+    color: var(--primary-color);
+    opacity: 0.9;
+}
+
+.corpHeader .corpHeader__wrap .corpHeader__link {
+    color: var(--heading-color);
+    opacity: 0.7;
+}
+
+
+.corpHeader__dropdown-menu {
+    min-width: 19rem;
+    padding: 1.6rem 0;
+    left: -50%;
+    border-radius: var(--border-radius);
+}
+
+.corpHeader__dropdown-menu.show::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--bg-dark-color);
+    border: 1px solid var(--border-color-light);
+    display: block;
+    border-right: none;
+    border-bottom: none;
+    transform: translateX(-50%) rotateZ(45deg);
+    position: absolute;
+    top: -7px;
+    left: 49%;
+    z-index: 1001;
+}
+
+.dark .corpHeader__dropdown-menu {
+    background-color: var(--bg-dark-color);
+    border: 1px solid var(--border-color-light);
+}
+
+.corpHeader__dropdown-menu .dropdown-item {
+    color: var(--heading-color);
+    opacity: 0.8;
+    padding: 6px 20px;
+}
+
+.corpHeader__dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+    opacity: 1;
+}
+
+.corpHeader__search {
+    margin-right: 16px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.corpHeader__search i {
+    font-size: 16px;
+    line-height: 45px;
+    color: white;
+}
+
+#switchButton {
+    border: none;
+    font-size: 20px;
+    background: transparent;
+}
+
+#switchButton .fa-moon {
+    transform: rotate(-30deg);
+}
+
+.dark .corpHeader__brand .navbar-brand,
+.dark .corpHeader__dropdown-menu .dropdown-item,
+.dark .corpHeader .corpHeader__wrap .corpHeader__link:hover,
+.dark .navbar-light .navbar-nav .show>.corpHeader__link,
+.dark .corpHeader .corpHeader__link {
+    color: var(--heading-dark-color);
+}
  /* Carousel: Dev_Văn Dũng  */
 
 
