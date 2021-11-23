@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #009f4d;
+    --secondary-color: #213364;
+    --title-color: #7e7d7d;
+    --heading-color: #3f3a64;
+    --font-color: #666;
+    --bg-color: #fff;
+    --border-radius: 8px;
+    --border-radius-full: 35px;
+    --border-color: transparent;
+    --border-color-light: #eee;
+    --nav-color: #292922;
+    --dropdown-color: #fff;
+    --iframe-filter: grayscale(0%);
+    --bg-grey: #f7f7f7;
+    --bg-lightgrey: #f8f9fa;
+    --layer: rgba(29, 42, 55, 0.7);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Jost', sans-serif;
+}
+
+ /* Header: Dev_Quốc Kỳ  */
+
+
+ /* Slider: Dev_Quốc Kỳ  */
+
+
+ /* About Us: Dev_Quốc Kỳ  */
+
+
+ /* Features: Dev_Quốc Kỳ  */
+
+
+ /* Services: Dev_Quốc Kỳ  */
+
+
+ /* Gallery: Dev_Quốc Kỳ  */
+
+
+ /* Slients: Dev_Quốc Kỳ  */
+
+
+ /* Progress: Dev_Văn Dũng  */
+
+
+ /* Testimonials: Dev_Văn Dũng  */
+
+
+ /* Blog: Dev_Văn Dũng  */
+
+
+ /* Research: Dev_Văn Dũng  */
+
+
+ /* Footer: Dev_Văn Dũng  */
+
+
+ /* Contact Us: Dev_Văn Dũng  */
+
+
+ /* Copyright: Dev_Văn Dũng  */
+
