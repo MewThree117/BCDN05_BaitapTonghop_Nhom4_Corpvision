@@ -25,8 +25,8 @@
     <header id="corpHeader" class="corpHeader">
       <div class="corpHeader__wrap container">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="corpHeader__brand">
-            <a class="navbar-brand" href="#">
+          <div class="corpHeader__logo">
+            <a class="corpHeader__color corpHeader__brand navbar-brand" href="index.html">
                 <span>
                     <i class="fa fa-align-right"></i>
                     Corp Vision
@@ -35,45 +35,49 @@
             </a>
           </div>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" 
+          <button class="corpHeader__toggler navbar-toggler" onclick="clickButton()" type="button" data-toggle="collapse" 
           data-target="#corpNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i id="iconBars" class="corpHeader__toggler-icon fa fa-bars"></i>
+            <!-- <i id="iconClose" class="corpHeader__toggler-icon fas fa-times"></i> -->
           </button>
         
           <div class="collapse navbar-collapse" id="corpNavbar">
-            <ul class="navbar-nav mx-lg-auto">
-              <li class="nav-item active">
-                <a class="nav-link corpHeader__link" href="#">Home <span class="sr-only">(current)</span></a>
+            <ul class="corpHeader__list navbar-nav mx-lg-auto">
+              <li class="corpHeader__item nav-item active">
+                <a id="corpNavbar__home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link corpHeader__link" href="#">About</a>
+              <li class="corpHeader__item nav-item">
+                <a class="corpHeader__color corpHeader__link nav-link" href="#">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link corpHeader__link" href="#">Services</a>
+              <li class="corpHeader__item nav-item">
+                <a class="corpHeader__color corpHeader__link nav-link" href="#">Services</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link corpHeader__link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+              <li class="corpHeader__item nav-item dropdown">
+                <a class="corpHeader__color corpHeader__link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                   Pages
                 </a>
-                <div class="dropdown-menu corpHeader__dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Blog posts</a>
-                  <a class="dropdown-item" href="#">404 page</a>
-                  <a class="dropdown-item" href="#">langding page</a>
-                  <a class="dropdown-item" href="#">elements page</a>
+                <div class="corpHeader__dropdown-menu dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="corpHeader__dropdown-item dropdown-item" href="#">Blog posts</a>
+                  <a class="corpHeader__dropdown-item dropdown-item" href="#">404 page</a>
+                  <a class="corpHeader__dropdown-item dropdown-item" href="#">langding page</a>
+                  <a class="corpHeader__dropdown-item dropdown-item" href="#">elements page</a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link corpHeader__link" href="#">Contact</a>
+              <li class="corpHeader__item nav-item">
+                <a class="corpHeader__color corpHeader__link nav-link" href="#">Contact</a>
               </li>
             </ul>
-            <div class="corpHeader__search">
-              <i class="fa fa-search"></i>  
-            </div>
-            <div class="corpHeader__theme">
-              <button id="switchButton" title="Click to switch theme">
-                <i class="far fa-moon"></i>
-                <i class="far fa-sun"></i>
-              </button>
+
+            <div class="corpHeader__btn-wrap">
+              <div class="corpHeader__search">
+                <i class="fa fa-search"></i>  
+              </div>
+              <div class="corpHeader__theme">
+                <button id="switchButton" title="Click to switch theme">
+                  <i class="corpHeader__color far fa-moon"></i>
+                  <i class="far fa-sun"></i>
+                </button>
+              </div>
             </div>
           </div>
         </nav>
@@ -84,7 +88,56 @@
     <section class="corpCarousel"></section>
 
     <!-- About Us: Dev_Quốc Kỳ -->
-    <section class="corpAbout"></section>
+    <section class="corpAbout">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="corpAbout__left">
+              <div class="title">
+                <h3>ABOUT US</h3>
+                <h2>We make the best strategies for you, Enhancing your success</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut ex ea.</p>
+              </div>
+              <ul class="corpAbout__left-list">
+                <li class="corpAbout__left-item">
+                  <a class="corpAbout__left-link" href="#">
+                    <i class="fa fa-check-circle"></i>
+                    UI/UX Design and Development
+                  </a>
+                </li>
+                <li class="corpAbout__left-item">
+                  <a class="corpAbout__left-link" href="#">
+                    <i class="fa fa-check-circle"></i>
+                    Branding Design and Identity
+                  </a>
+                </li>
+                <li class="corpAbout__left-item">
+                  <a class="corpAbout__left-link" href="#">
+                    <i class="fa fa-check-circle"></i>
+                    Mobile App Design and Development
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
+            <div class="corpAbout__right">
+              <div class="row">
+                <div class="col-6">
+                  <img src="./image/about_1.jpg" alt="about_1" class="radius-image img-fluid">
+                </div>
+                <div class="col-6 mt-4">
+                  <img src="./image/about_2.jpg" alt="about_2" class="radius-image img-fluid mb-md-3 mb-2">
+                  <img src="./image/about_3.jpg" alt="about_3" class="radius-image img-fluid mt-md-3">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Features: Dev_Quốc Kỳ -->
     <section class="corpFeatures"></section>
@@ -95,7 +148,7 @@
     <!-- Gallery: Dev_Văn Dũng -->
     <section class="corpGallery"></section>
 
-    <!-- Slients: Dev_Văn Dũng -->
+    <!-- Clients: Dev_Văn Dũng -->
     <section class="corpClients"></section>
 
     <!-- Progress: Dev_Quốc Kỳ -->
@@ -121,19 +174,30 @@
     <!-- Back to top: Dev_Văn Dũng -->
 
     <!-- Javascript -->
+    <!-- Thay đổi background-color khi scroll -->
     <script>
       window.onscroll = function() {scrollFunction()};
   
       function scrollFunction() {
+        var x = document.getElementsByClassName("corpHeader__color");
+        var i;  
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-          document.getElementById("corpHeader").style.height = "80px";
+          document.getElementById("corpHeader").style.padding = "5px 0px";
           document.getElementById("corpHeader").style.backgroundColor = "currentColor";
-      } else {
-          document.getElementById("corpHeader").style.height = "100px";
-          document.getElementById("corpHeader").style.backgroundColor = "transparent";
+          document.getElementById("corpNavbar__home").style.color = "#009f4d";
+          for (i = 0; i < x.length; i++) {
+            x[i].style.color = "#3f3a64";
           }
+        } else {
+          document.getElementById("corpHeader").style.padding = "15px 0px";
+          document.getElementById("corpHeader").style.backgroundColor = "transparent";
+          document.getElementById("corpNavbar__home").style.color = "#fff";
+          for (i = 0; i < x.length; i++) {
+            x[i].style.color = "#fff";
+          }
+        }
       }
-  </script>
+    </script>
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 

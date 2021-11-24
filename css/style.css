@@ -1,14 +1,15 @@
 :root {
     --primary-color: #009f4d;
     --secondary-color: #213364;
-    --title-color: #7e7d7d;
+    --title-small-color: #7e7d7d;
     --heading-color: #3f3a64;
     --font-color: #666;
     --bg-color: #fff;
     --border-radius: 8px;
     --border-radius-full: 35px;
     --border-color: transparent;
-    --border-color-light: #eee;
+    --border-color-light: rgba(255, 255, 255, 0.1);
+    --border-color-dark: rgba(0, 0, 0, 0.1);
     --nav-color: #292922;
     --dropdown-color: #fff;
     --iframe-filter: grayscale(0%);
@@ -17,7 +18,7 @@
     --layer: rgba(29, 42, 55, 0.7);
     /* dark theme */
     --bg-dark-color: #151421;
-    --heading-dark-color: #eee;
+    --heading-dark-color: #fff;
 }
 
 * {
@@ -26,10 +27,52 @@
     box-sizing: border-box;
 }
 
+a:hover {
+    text-decoration: none;
+    color: currentColor;
+}
+
 html, body {
     font-family: 'Jost', sans-serif;
-    /* 1rem = 10px */
-    font-size: 62.5%;
+}
+
+.title h3 {
+    color: var(--title-small-color);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.dark .title h3 {
+    color: #7e7d7d;
+}
+
+.title h2 {
+    color: var(--heading-color);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.dark .title h2 {
+    color: #eee;
+}
+
+.title p {
+    color: var(--font-color);
+    font-size: 17px;
+    line-height: 27px;
+    opacity: 0.8;
+}
+
+.dark .title p {
+    color: #c2c2c2;
+}
+
+.radius-image {
+    border-radius: 8px;
 }
 
 /* Light theme */
@@ -43,7 +86,7 @@ html, body {
 
 #switchButton .fa-moon {
     display: block;
-    color: var(--heading-color);
+    color: white;
 }
 
 /* Dark Theme*/
@@ -61,18 +104,21 @@ html, body {
     display: none;
 }
 
+
  /* Header: Dev_Quốc Kỳ  */
 .corpHeader {
     position: fixed;
-    width: 100%;
-    height: 100px;
     z-index: 10;
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
     border-bottom: 1px solid rgba(231, 231, 231, 0.18);
     display: grid;
     align-items: center;
     transition: all 0.4s ease 0s;
     /* dùng cho currentColor để đổi màu navbar khi scroll */
     color: #fff;
+    /* display: none; */
 }
 
 .dark .corpHeader {
@@ -80,19 +126,23 @@ html, body {
     color: var(--bg-dark-color);
 }
 
-.corpHeader__brand .navbar-brand {
-    font-size: 3rem;
+.corpHeader__logo .corpHeader__brand {
+    font-size: 30px;
     font-weight: 600;
     line-height: 1.2;
-    color: var(--heading-color);
+    color: #fff;
 }
 
-.corpHeader__brand span:first-child i   {
+.corpHeader__logo .corpHeader__brand:hover {
+    color: #fff;
+}
+
+.corpHeader__logo span:first-child i   {
     color: var(--primary-color);
 }
 
-.corpHeader__brand span:last-child {
-    font-size: 1.4rem;  
+.corpHeader__logo span:last-child {
+    font-size: 14px;  
     display: block;
     padding-left: 46px;
     opacity: 0.9;
@@ -103,30 +153,58 @@ html, body {
 }
 
 #corpNavbar a {
-    font-size: 1.5rem;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.corpHeader .corpHeader__wrap .active .corpHeader__link {
-    color: var(--primary-color);
-    opacity: 0.9;
+#corpNavbar__home {
+    color: #fff;
 }
 
-.corpHeader .corpHeader__wrap .corpHeader__link {
-    color: var(--heading-color);
-    opacity: 0.7;
+#corpNavbar .corpHeader__link {
+    color: #fff;
+    opacity: 0.8;
+    transition: all 0.5s;
 }
 
+#corpNavbar .corpHeader__link:hover {
+    opacity: 1;
+}
+
+.dark #corpNavbar .corpHeader__link:hover {
+    opacity: 1;
+}
 
 .corpHeader__dropdown-menu {
-    min-width: 19rem;
-    padding: 1.6rem 0;
+    min-width: 190px;
+    padding: 16px 0;
     left: -50%;
     border-radius: var(--border-radius);
 }
 
+.dark .corpHeader__dropdown-menu {
+    background-color: var(--bg-dark-color);
+    border: 1px solid var(--border-color-light);
+}
+
 .corpHeader__dropdown-menu.show::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color-dark);
+    display: block;
+    border-right: none;
+    border-bottom: none;
+    transform: translateX(-50%) rotateZ(45deg);
+    position: absolute;
+    top: -7px;
+    left: 49%;
+    z-index: 1001;
+}
+
+.dark .corpHeader__dropdown-menu.show::before {
     content: '';
     width: 14px;
     height: 14px;
@@ -142,20 +220,25 @@ html, body {
     z-index: 1001;
 }
 
-.dark .corpHeader__dropdown-menu {
-    background-color: var(--bg-dark-color);
-    border: 1px solid var(--border-color-light);
-}
-
-.corpHeader__dropdown-menu .dropdown-item {
+.corpHeader__dropdown-menu .corpHeader__dropdown-item {
     color: var(--heading-color);
     opacity: 0.8;
     padding: 6px 20px;
+    transition: all 0.5s;
 }
 
-.corpHeader__dropdown-menu .dropdown-item:hover {
+.dark .corpHeader__dropdown-menu .corpHeader__dropdown-item {
+    color: #eee;
+}
+
+.corpHeader__dropdown-menu .corpHeader__dropdown-item:hover {
     background-color: transparent;
     opacity: 1;
+}
+
+.corpHeader__btn-wrap {
+    display: flex;
+    align-items: center;
 }
 
 .corpHeader__search {
@@ -171,6 +254,7 @@ html, body {
     font-size: 16px;
     line-height: 45px;
     color: white;
+    cursor: pointer;
 }
 
 #switchButton {
@@ -183,19 +267,48 @@ html, body {
     transform: rotate(-30deg);
 }
 
-.dark .corpHeader__brand .navbar-brand,
-.dark .corpHeader__dropdown-menu .dropdown-item,
-.dark .corpHeader .corpHeader__wrap .corpHeader__link:hover,
-.dark .navbar-light .navbar-nav .show>.corpHeader__link,
-.dark .corpHeader .corpHeader__link {
-    color: var(--heading-dark-color);
+.dark .corpHeader__logo .corpHeader__brand,
+.dark .corpHeader .corpHeader__color {
+    color: var(--heading-dark-color) !important;
 }
  /* Carousel: Dev_Văn Dũng  */
 
 
  /* About Us: Dev_Quốc Kỳ  */
+.corpAbout {
+    padding: 48px 0;
+}
 
+.corpAbout__left p {
+    margin-top: 24px;
+}
 
+.corpAbout__left-list {
+    margin-top: 24px;
+    padding-top: 8px;
+    list-style: none;
+}
+
+.corpAbout__left-item {
+    margin-bottom: 15px;
+}
+
+.corpAbout__left-link {
+    text-decoration: none;
+    color: var(--heading-color);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.dark .corpAbout__left-link {
+    color: #eee;
+}
+
+.corpAbout__left-link i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
  /* Features: Dev_Quốc Kỳ  */
 
 
@@ -205,7 +318,7 @@ html, body {
  /* Gallery: Dev_Văn Dũng  */
 
 
- /* Slients: Dev_Văn Dũng  */
+ /* Clients: Dev_Văn Dũng  */
 
 
  /* Progress: Dev_Quốc Kỳ  */
@@ -228,3 +341,52 @@ html, body {
 
  /* Copyright: Dev_Văn Dũng  */
 
+/* Responsive */
+@media screen and (max-width:992px) {
+    .corpHeader__list {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .corpHeader__dropdown-menu.show::before {
+        top: 34px;
+    }
+
+    .dark .corpHeader__dropdown-menu.show::before {
+        top: 34px;
+    }
+
+    .corpHeader__dropdown-menu {
+        text-align: center;
+    }
+
+    .corpHeader__item, .corpHeader__dropdown-item {
+        padding: 6px 0;
+    }
+
+    .corpHeader__toggler {
+        width: 34px;
+        height: 34px;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--primary-color);
+        padding: 0;
+    }
+    
+    .corpHeader__toggler-icon {
+        border: none;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    #corpNavbar {
+        position: relative;
+    }
+    
+    .corpHeader__btn-wrap {
+        position: absolute;
+        top: -53px;
+        right: 53px;
+    }
+    
+}
