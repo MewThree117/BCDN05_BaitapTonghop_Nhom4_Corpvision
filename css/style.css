@@ -8,6 +8,7 @@
     --border-radius: 8px;
     --border-radius-full: 35px;
     --border-color: transparent;
+    --border-color-li: #eee;
     --border-color-light: rgba(255, 255, 255, 0.1);
     --border-color-dark: rgba(0, 0, 0, 0.1);
     --nav-color: #292922;
@@ -25,10 +26,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all 0.6s linear;
+    transition: width none;
 }
 
 html, body {
     font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a:hover {
@@ -74,7 +81,6 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 .dark .btn__link:hover {
     color: var(--primary-color);
 }
-
 .title h3 {
     color: var(--title-small-color);
     font-size: 14px;
@@ -454,6 +460,118 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 
 
  /* Gallery: Dev_Văn Dũng  */
+ .success {
+    background-color: var(--border-color-light);
+} 
+.success .title {
+    text-align: center;
+}
+.success__list {
+    padding-bottom: 48px;
+}
+.success__item {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.success__list img {
+    width: 100%;
+    transition: all 0.3s;
+    z-index: 2;
+    transform: scale(1);
+}
+.success__item:hover  img {
+    overflow: hidden;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.success__item a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.success__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 42, 55, 0.7);
+    transition: all 0.3s;
+    z-index: 1;
+    opacity: 0;
+}
+.success__item:hover .success__overlay {
+    opacity: 1;
+}
+.success__item {
+    position: relative;
+}
+.success__hover {
+  position: absolute;
+    opacity: 0;
+   transition: all 0.5s;
+   z-index: 2;
+   cursor: pointer;
+  padding: 20px 44px;
+  bottom: -100%;
+  left: 0;
+  visibility: hidden;
+}
+.success__item:hover .success__hover {
+    visibility: visible;
+    bottom: 0;
+    opacity: 1;
+}
+.success__hover h3{
+   color: #fff;
+   font-size: 24px;
+}
+.success__hover p {
+    color: #eee;
+    font-size: 18px;
+}
+/* inline library */
+.lb-data .lb-caption {
+    padding-top: 1em;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 600;
+}
+.lb-data .lb-number {
+    display: block;
+    clear: left;
+    padding-top: 1em;
+    font-size: 16px;
+    color: var(--primary-color);
+}
+.lb-nav a.lb-next {
+    display: none;
+}
+.logo {
+    position: relative;
+}
+.logo::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid #ddd;
+  top:0;left: -20px;
+  width: 103%;
+}
+.logo__wrap {
+    justify-content: center;
+}
+.logo__img  {
+    margin-top: 50px;
+    
+}
+.logo__wrap .logo__img  img{
+    max-width: 100%;
+    height: auto;
+    padding-right: 30px;
+}
 
 
  /* Clients: Dev_Văn Dũng  */
@@ -466,8 +584,102 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 
 
  /* Blog: Dev_Văn Dũng  */
+ .news .title {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    
+}
+.news .title h3 {
+    margin-bottom: 14px;
+}
+.news__item {
+    border: 1px solid transparent;
+ 
 
+}
+.news__item .news__img {
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 4%);
+    overflow: hidden;
 
+}
+
+ .news__item .news__img img{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+   transition: all 0.3s;
+   transform: scale(1);
+
+}
+.news__item:hover  .news__img img {
+transform: scale(1.1);
+cursor: pointer;
+
+}
+.news__item:hover  .news__img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.news__item .news__content {
+    box-shadow: 0px 25px 98px 0px rgb(0 0 0 / 4%);
+   padding: 18px 22px;
+}
+.news__item .news__content h3 a{
+    font-weight: 400;
+    font-size: 17px;
+    color: #999;
+}
+.news__item .news__content h2 a {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: var(--heading-color);
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+.news__item .news__content h2:hover a {
+    color: var(--primary-color);
+} 
+.news__item .news__content .news__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    position: relative;
+}
+.news__item .news__content .news__footer::before {
+ content: '';
+ position: absolute;
+ bottom: 55px;
+ left: -22px;
+ width: 115%;
+ border: 1px solid #eee;
+}
+.news__item .news__content .news__footer  a {
+    font-size: 16px;
+    color: var(--heading-color);
+    font-weight: 600;
+    line-height: 26px;
+}
+.news__item .news__content .news__footer  a:hover {
+    color: var(--primary-color);
+
+} 
+.news__item .news__content .news__footer  a span {
+    font-size: 16px;
+    color: #999;
+
+}
+.news__item .news__content .news__footer p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #999;
+}
  /* Research: Dev_Văn Dũng  */
 
 
