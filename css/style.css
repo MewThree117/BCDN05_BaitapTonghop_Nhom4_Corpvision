@@ -32,18 +32,54 @@
     transition: width none;
 }
 
+html, body {
+    font-family: 'Jost', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 a:hover {
     text-decoration: none;
     color: currentColor;
 }
 
-html, body {
-    font-family: 'Jost', sans-serif;
-    
+h1, h2, h3, h4, h5, h6, p, span, ul {
+    margin: 0;
 }
-html {
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+
+.btn {
+    padding: 15px 50px;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    transition: all 0.5s;
+    border-radius: var(--border-radius);
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #008030;
+    border-color: #00732c;
+}
+
+.btn__link {
+    font-weight: 600;
+    color: var(--heading-color);
+    transition: all 0.5s;
+}
+
+.btn__link:hover {
+    color: var(--primary-color);
+}
+
+.dark .btn__link {
+    color: #eee;
+}
+
+.dark .btn__link:hover {
+    color: var(--primary-color);
 }
 .title h3 {
     color: var(--title-small-color);
@@ -133,6 +169,10 @@ html {
 .dark .corpHeader {
     /* dùng cho currentColor để đổi màu navbar khi scroll */
     color: var(--bg-dark-color);
+}
+
+.corpHeader__wrap-navbar {
+    padding: 8px 0;
 }
 
 .corpHeader__logo .corpHeader__brand {
@@ -284,10 +324,6 @@ html {
 
 
  /* About Us: Dev_Quốc Kỳ  */
-.corpAbout {
-    padding: 48px 0;
-}
-
 .corpAbout__left p {
     margin-top: 24px;
 }
@@ -319,9 +355,108 @@ html {
     color: var(--primary-color);
 }
  /* Features: Dev_Quốc Kỳ  */
+.corpFeatures {
+    background-color: var(--bg-grey);
+}
 
+.dark .corpFeatures {
+    background-color: #100f19;
+}
+
+.corpFeatures__left h2 {
+    margin-bottom: 24px;
+}
+
+.corpFeatures__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.corpFeatures__grid-item {
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px 5px 0 rgba(1, 1, 1, 0.05);
+    transition: all 0.3s ease;
+}
+
+.dark .corpFeatures__grid-item {
+    background-color: #151421;
+}
+
+.corpFeatures__grid-item:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: rgb(46 41 51 / 8%) 0px 2px 4px, rgb(71 63 79 / 16%) 0px 5px 10px;
+}
+
+.corpFeatures__icon {
+    margin-bottom: 25px;
+}
+
+.corpFeatures__title {
+    font-size: 22px;
+    line-height: 28px;
+}
 
  /* Services: Dev_Quốc Kỳ  */
+.corpServices__title h2 {
+    text-align: center;
+}
+
+.corpServices__item:hover .corpServices__link {
+    color: var(--primary-color);
+}
+
+.corpServices__img {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.corpServices__info {
+    padding: 0 20px;
+}
+
+.corpServices__link {
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 600;
+    text-align: center;
+    background: var(--bg-color);
+    padding: 12px 35px;
+    display: inline-block;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transform: translateY(-25px);
+    box-shadow: rgb(1 1 1 / 5%) 1px 1px 5px 0px;
+}
+
+.dark .corpServices__link {
+    background-color: #151421;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.corpServices__info p {
+    margin-top: -10px;
+    font-size: 17px;
+    line-height: 27px;
+    color: var(--font-color);
+    opacity: 0.8;
+}
+
+.dark .corpServices__info p {
+    color: #c2c2c2;
+}
+
+.corpServices__btn {
+    display: block;
+    padding: 8px 35px;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--heading-color);
+    border-radius: var(--border-radius);
+}
 
 
  /* Gallery: Dev_Văn Dũng  */

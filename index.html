@@ -27,7 +27,7 @@
     <!-- Header: Dev_Quốc Kỳ -->
     <header id="corpHeader" class="corpHeader">
       <div class="corpHeader__wrap container">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="corpHeader__wrap-navbar navbar navbar-expand-lg navbar-light">
           <div class="corpHeader__logo">
             <a class="corpHeader__color corpHeader__brand navbar-brand" href="index.html">
                 <span>
@@ -91,11 +91,11 @@
     <section class="corpCarousel"></section>
 
     <!-- About Us: Dev_Quốc Kỳ -->
-    <section class="corpAbout">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="corpAbout__left">
+    <section class="corpAbout py-5" id="about">
+      <div class="container py-lg-5 py-md-3">
+        <div class="corpAbout__wrap">
+          <div class="row align-items-center">
+            <div class="corpAbout__left col-lg-6">
               <div class="title">
                 <h3>ABOUT US</h3>
                 <h2>We make the best strategies for you, Enhancing your success</h2>
@@ -124,16 +124,16 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
-            <div class="corpAbout__right">
-              <div class="row">
-                <div class="col-6">
-                  <img src="./image/about_1.jpg" alt="about_1" class="radius-image img-fluid">
-                </div>
-                <div class="col-6 mt-4">
-                  <img src="./image/about_2.jpg" alt="about_2" class="radius-image img-fluid mb-md-3 mb-2">
-                  <img src="./image/about_3.jpg" alt="about_3" class="radius-image img-fluid mt-md-3">
+            <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
+              <div class="corpAbout__right">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="./image/About/about_1.jpg" alt="about_1" class="radius-image img-fluid">
+                  </div>
+                  <div class="col-6 mt-4">
+                    <img src="./image/About/about_2.jpg" alt="about_2" class="radius-image img-fluid mb-md-3 mb-sm-2">
+                    <img src="./image/About/about_3.jpg" alt="about_3" class="radius-image img-fluid mt-md-3 mt-sm-3">
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,10 +143,109 @@
     </section>
 
     <!-- Features: Dev_Quốc Kỳ -->
-    <section class="corpFeatures"></section>
+    <section class="corpFeatures py-5" id="work">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row align-items-center">
+          <div class="corpFeatures__left col-lg-6 pr-lg-5">
+            <div class="title">
+              <h3>EVERY DAY BRINGS NEW CHALLENGES</h3>
+              <h2>Creative agency focused on vision, product and people</h2>
+              <p>
+                Aurabitur id gravida risus. Fusce eget ex fermentum, 
+                ultricies nisi ac sed, lacinia est. Quisque ut lectus consequat, 
+                venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit. 
+                Suspendisse non init magnaa velit efficitur, dolor eget ex fermentum.
+              </p>
+              <a href="#about" class="btn mt-lg-5 mt-4">Discover More</a>
+            </div>
+          </div>
+
+          <div class="corpFeatures__right col-lg-6 mt-lg-0 mt-md-5 mt-4 justify-content-center">
+            <div class="corpFeatures__grid">
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon1.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">Our Process</a>
+                </h4>
+              </div>
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon2.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">How We Help</a>
+                </h4>
+              </div>
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon3.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">UI/UX Design</a>
+                </h4>
+              </div>
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon4.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">Creative Ideas</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Services: Dev_Quốc Kỳ -->
-    <section class="corpServices"></section>
+    <section class="corpServices py-5">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="corpServices__title title">
+          <h2>Always there for your care, our Services</h2>
+        </div>
+        <div class="row mt-lg-5 mt-4 text-center justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="corpServices__item">
+              <a href="#" class="d-block">
+                <img src="./image/Service/service1.jpg" alt="" class="corpServices__img img-fluid">
+              </a>
+              <div class="corpServices__info">
+                <a href="#" class="corpServices__link btn__link">Work Expertise</a>
+                <p>Venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit..</p>
+              </div>
+              <a href="#" class="corpServices__btn btn__link mt-3">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+            <div class="corpServices__item">
+              <a href="#" class="d-block">
+                <img src="./image/Service/service2.jpg" alt="" class="corpServices__img img-fluid">
+              </a>
+              <div class="corpServices__info">
+                <a href="#" class="corpServices__link btn__link">Work Expertise</a>
+                <p>Venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit..</p>
+              </div>
+              <a href="#" class="corpServices__btn btn__link mt-3">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+            <div class="corpServices__item">
+              <a href="#" class="d-block">
+                <img src="./image/Service/service3.jpg" alt="" class="corpServices__img img-fluid">
+              </a>
+              <div class="corpServices__info">
+                <a href="#" class="corpServices__link btn__link">Work Expertise</a>
+                <p>Venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit..</p>
+              </div>
+              <a href="#" class="corpServices__btn btn__link mt-3">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Gallery: Dev_Văn Dũng -->
     <section class="success">
