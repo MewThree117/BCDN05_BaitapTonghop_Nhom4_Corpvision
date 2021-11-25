@@ -15,8 +15,10 @@
     <!-- CDN Animate.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- image Lightbox -->
-   <link rel="stylesheet" href="./Js/lightbox2-2.11.3/lightbox2-2.11.3/dist/css/lightbox.css">
-
+    <link rel="stylesheet" href="./Js/lightbox2-2.11.3/lightbox2-2.11.3/dist/css/lightbox.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./Owl_Carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Owl_Carousel/owl.theme.default.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,11 +27,11 @@
 </head>
 <body id="myBody">
     <!-- Header: Dev_Quốc Kỳ -->
-    <header id="corpHeader" class="corpHeader">
+    <header class="corpHeader" id="corpHeader">
       <div class="corpHeader__wrap container">
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="corpHeader__wrap-navbar navbar navbar-expand-lg navbar-light">
           <div class="corpHeader__logo">
-            <a class="corpHeader__color corpHeader__brand navbar-brand" href="index.html">
+            <a class="corpHeader__brand corpHeader__color navbar-brand" href="index.html">
                 <span>
                     <i class="fa fa-align-right"></i>
                     Corp Vision
@@ -37,17 +39,19 @@
                 <span>Vision to your Future</span>
             </a>
           </div>
-
+          <input type="checkbox" hidden style="cursor: pointer;" class="corpHeader__input" id="corpHeader__checked">
           <button class="corpHeader__toggler navbar-toggler" onclick="clickButton()" type="button" data-toggle="collapse" 
           data-target="#corpNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i id="iconBars" class="corpHeader__toggler-icon fa fa-bars"></i>
-            <!-- <i id="iconClose" class="corpHeader__toggler-icon fas fa-times"></i> -->
+            <label for="corpHeader__checked" class="corpHeader__mobile-btn">
+              <i id="iconBars" class="corpHeader__toggler-icon fa fa-bars"></i>
+              <i id="iconClose" class="corpHeader__toggler-icon fas fa-times"></i>
+            </label>
           </button>
         
           <div class="collapse navbar-collapse" id="corpNavbar">
             <ul class="corpHeader__list navbar-nav mx-lg-auto">
               <li class="corpHeader__item nav-item active">
-                <a id="corpNavbar__home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a id="corpNavbar__home" class="corpHeader__link nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="corpHeader__item nav-item">
                 <a class="corpHeader__color corpHeader__link nav-link" href="#">About</a>
@@ -111,11 +115,11 @@
     </section>
 
     <!-- About Us: Dev_Quốc Kỳ -->
-    <section class="corpAbout">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="corpAbout__left">
+    <section class="corpAbout py-5" id="about">
+      <div class="container py-lg-5 py-md-3">
+        <div class="corpAbout__wrap">
+          <div class="row align-items-center">
+            <div class="corpAbout__left col-lg-6">
               <div class="title">
                 <h3>ABOUT US</h3>
                 <h2>We make the best strategies for you, Enhancing your success</h2>
@@ -144,16 +148,16 @@
                 </li>
               </ul>
             </div>
-          </div>
-          <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
-            <div class="corpAbout__right">
-              <div class="row">
-                <div class="col-6">
-                  <img src="./image/about_1.jpg" alt="about_1" class="radius-image img-fluid">
-                </div>
-                <div class="col-6 mt-4">
-                  <img src="./image/about_2.jpg" alt="about_2" class="radius-image img-fluid mb-md-3 mb-2">
-                  <img src="./image/about_3.jpg" alt="about_3" class="radius-image img-fluid mt-md-3">
+            <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
+              <div class="corpAbout__right">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="./image/About/about_1.jpg" alt="about_1" class="radius-image img-fluid">
+                  </div>
+                  <div class="col-6 mt-4">
+                    <img src="./image/About/about_2.jpg" alt="about_2" class="radius-image img-fluid mb-md-3 mb-sm-2">
+                    <img src="./image/About/about_3.jpg" alt="about_3" class="radius-image img-fluid mt-md-3 mt-sm-3">
+                  </div>
                 </div>
               </div>
             </div>
@@ -163,10 +167,109 @@
     </section>
 
     <!-- Features: Dev_Quốc Kỳ -->
-    <section class="corpFeatures"></section>
+    <section class="corpFeatures py-5" id="work">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row align-items-center">
+          <div class="corpFeatures__left col-lg-6 pr-lg-5">
+            <div class="title">
+              <h3>EVERY DAY BRINGS NEW CHALLENGES</h3>
+              <h2>Creative agency focused on vision, product and people</h2>
+              <p>
+                Aurabitur id gravida risus. Fusce eget ex fermentum, 
+                ultricies nisi ac sed, lacinia est. Quisque ut lectus consequat, 
+                venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit. 
+                Suspendisse non init magnaa velit efficitur, dolor eget ex fermentum.
+              </p>
+              <a href="#about" class="btn mt-lg-5 mt-4">Discover More</a>
+            </div>
+          </div>
+
+          <div class="corpFeatures__right col-lg-6 mt-lg-0 mt-md-5 mt-4 justify-content-center">
+            <div class="corpFeatures__grid">
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon1.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">Our Process</a>
+                </h4>
+              </div>
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon2.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">How We Help</a>
+                </h4>
+              </div>
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon3.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">UI/UX Design</a>
+                </h4>
+              </div>
+              <div class="corpFeatures__grid-item">
+                <div class="corpFeatures__icon">
+                  <img src="./image/Features/icon4.png" alt="" class="img-fluid">
+                </div>
+                <h4>
+                  <a href="#" class="corpFeatures__title btn__link">Creative Ideas</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Services: Dev_Quốc Kỳ -->
-    <section class="corpServices"></section>
+    <section class="corpServices py-5" id="services">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="corpServices__title title">
+          <h2>Always there for your care, our Services</h2>
+        </div>
+        <div class="row mt-lg-5 mt-4 text-center justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="corpServices__item">
+              <a href="#" class="d-block">
+                <img src="./image/Service/service1.jpg" alt="" class="corpServices__img img-fluid">
+              </a>
+              <div class="corpServices__info">
+                <a href="#" class="corpServices__link btn__link">Work Expertise</a>
+                <p>Venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit..</p>
+              </div>
+              <a href="#" class="corpServices__btn btn__link mt-3">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+            <div class="corpServices__item">
+              <a href="#" class="d-block">
+                <img src="./image/Service/service2.jpg" alt="" class="corpServices__img img-fluid">
+              </a>
+              <div class="corpServices__info">
+                <a href="#" class="corpServices__link btn__link">Work Expertise</a>
+                <p>Venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit..</p>
+              </div>
+              <a href="#" class="corpServices__btn btn__link mt-3">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+            <div class="corpServices__item">
+              <a href="#" class="d-block">
+                <img src="./image/Service/service3.jpg" alt="" class="corpServices__img img-fluid">
+              </a>
+              <div class="corpServices__info">
+                <a href="#" class="corpServices__link btn__link">Work Expertise</a>
+                <p>Venenatis eros et, sed commodo risus. Nullam sit amet laoreet elit..</p>
+              </div>
+              <a href="#" class="corpServices__btn btn__link mt-3">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Gallery: Dev_Văn Dũng -->
     <section class="success">
@@ -273,10 +376,142 @@
     <section class="corpClients"></section>
 
     <!-- Progress: Dev_Quốc Kỳ -->
-    <section class="corpProgress"></section>
+    <section class="corpProgress py-5" id="progress">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img src="./image/Progress/pro1.jpg" alt="" class="radius-image img-fluid">
+          </div>
+          <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
+            <div class="title">
+              <h3>YOUR SUCCESS IS OUR SUCCESS</h3>
+              <h2 class="mb-4 mpb-lg-2">Web design, marketing & SEO solutions that get results</h2>
+            </div>
+            <div class="corpProgress__info">
+              <h6 class="corpProgress__title" style="width: 80%;">
+                Marketing
+                <span>80%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient1 progress-bar" role="progressbar" style="width: 80%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="corpProgress__info">
+              <h6 class="corpProgress__title" style="width: 95%;">
+                Responsive Web design
+                <span>95%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient2 progress-bar" role="progressbar" style="width: 95%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="corpProgress__info">
+              <h6 class="corpProgress__title" style="width: 60%;">
+                Analytics
+                <span>60%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient3 progress-bar" role="progressbar" style="width: 60%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="corpProgress__info corpProgress__info--last">
+              <h6 class="corpProgress__title" style="width: 85%;">
+                Web Development
+                <span>85%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient4 progress-bar" role="progressbar" style="width: 85%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Testimonials: Dev_Quốc Kỳ -->
-    <section class="corpTestimonials"></section>
+    <section class="corpTesti py-5" id="testimoals">
+      <div class="container py-lg-4 py-md-3 py-2 pb-lg-0">
+        <div class="title">
+          <h3 class="text-center mb-1">HAPPY CLIENTS FEEDBACK</h3>
+          <h2 class="text-center mb-sm-5 mb-4">Reviews and Testimonials</h2>
+        </div>
+        <div class="corpTesti__list owl-carousel">
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. 
+                Velit beatae laudantium voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Esse architecto est ea sunt eligendi cum?
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team1.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!.
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team2.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!.
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team3.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!.
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team4.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Blog: Dev_Văn Dũng -->
     <section class="corpBlog"></section>
@@ -364,6 +599,7 @@
         var i;  
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
           document.getElementById("corpHeader").style.padding = "5px 0px";
+          document.getElementById("corpHeader").style.borderBottom = "transparent";
           document.getElementById("corpHeader").style.boxShadow = "0 3px 6px 0 rgb(0 0 0 / 5%)";
           document.getElementById("corpHeader").style.backgroundColor = "currentColor";
           document.getElementById("corpNavbar__home").style.color = "#009f4d";
@@ -372,8 +608,8 @@
           }
         } else {
           document.getElementById("corpHeader").style.padding = "15px 0px";
+          document.getElementById("corpHeader").style.borderBottom = "1px solid rgba(231, 231, 231, 0.18)";
           document.getElementById("corpHeader").style.boxShadow = "0 0 0 0px #fff";
-
           document.getElementById("corpHeader").style.backgroundColor = "transparent";
           document.getElementById("corpNavbar__home").style.color = "#fff";
           for (i = 0; i < x.length; i++) {
@@ -417,6 +653,20 @@
     sanitizeTitle: false
   })
   </script>
+
+  <!-- Owl Carousel -->
+  <script src="./Owl_Carousel/owl.carousel.min.js"></script>
+  <script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:1,
+        loop:true,
+        autoplay: false,
+        smartSpeed: 500,
+        dot:true,
+        dotsEach: true,
+    });
+</script>
   
 </body>
 </html>

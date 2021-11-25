@@ -28,22 +28,62 @@
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
-    transition: all 0.6s linear;
+    /* transition: all 0.5s linear; */
     transition: width none;
-}
-
-a:hover {
-    text-decoration: none;
-    color: currentColor;
 }
 
 html, body {
     font-family: 'Jost', sans-serif;
-    
-}
-html {
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+body a {
+    transition: all 0.5s;
+}
+
+body a:hover {
+    text-decoration: none;
+    color: currentColor;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, ul, label {
+    margin: 0;
+}
+
+.btn {
+    padding: 15px 50px;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    transition: all 0.5s;
+    border-radius: var(--border-radius);
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #008030;
+    border-color: #00732c;
+}
+
+.btn__link {
+    font-weight: 600;
+    color: var(--heading-color);
+    transition: all 0.5s;
+}
+
+.btn__link:hover {
+    color: var(--primary-color);
+}
+
+.dark .btn__link {
+    color: #eee;
+}
+
+.dark .btn__link:hover {
+    color: var(--primary-color);
 }
 .title h3 {
     color: var(--title-small-color);
@@ -91,11 +131,13 @@ html {
 
 #switchButton .fa-sun {
     display: none;
+    line-height: 45px;
 }
 
 #switchButton .fa-moon {
     display: block;
     color: white;
+    line-height: 45px;
 }
 
 /* Dark Theme*/
@@ -121,10 +163,9 @@ html {
     width: 100%;
     height: auto;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(231, 231, 231, 0.18);
     display: grid;
     align-items: center;
-    transition: all 0.4s ease 0s;
+    transition: all 0.3s ease 0s;
     /* dùng cho currentColor để đổi màu navbar khi scroll */
     color: #fff;
     /* display: none; */
@@ -133,6 +174,11 @@ html {
 .dark .corpHeader {
     /* dùng cho currentColor để đổi màu navbar khi scroll */
     color: var(--bg-dark-color);
+}
+
+.corpHeader__wrap-navbar {
+    position: relative;
+    padding: 8px 0;
 }
 
 .corpHeader__logo .corpHeader__brand {
@@ -174,7 +220,7 @@ html {
 #corpNavbar .corpHeader__link {
     color: #fff;
     opacity: 0.8;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 #corpNavbar .corpHeader__link:hover {
@@ -251,7 +297,7 @@ html {
 }
 
 .corpHeader__search {
-    margin-right: 16px;
+    margin-right: 12px;
     width: 45px;
     height: 45px;
     text-align: center;
@@ -280,14 +326,11 @@ html {
 .dark .corpHeader .corpHeader__color {
     color: var(--heading-dark-color) !important;
 }
+
  /* Carousel: Dev_Văn Dũng  */
 
 
  /* About Us: Dev_Quốc Kỳ  */
-.corpAbout {
-    padding: 48px 0;
-}
-
 .corpAbout__left p {
     margin-top: 24px;
 }
@@ -319,9 +362,108 @@ html {
     color: var(--primary-color);
 }
  /* Features: Dev_Quốc Kỳ  */
+.corpFeatures {
+    background-color: var(--bg-grey);
+}
 
+.dark .corpFeatures {
+    background-color: #100f19;
+}
+
+.corpFeatures__left h2 {
+    margin-bottom: 24px;
+}
+
+.corpFeatures__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.corpFeatures__grid-item {
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    background-color: var(--bg-color);
+    box-shadow: 1px 1px 5px 0 rgba(1, 1, 1, 0.05);
+    transition: all 0.3s ease;
+}
+
+.dark .corpFeatures__grid-item {
+    background-color: #151421;
+}
+
+.corpFeatures__grid-item:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: rgb(46 41 51 / 8%) 0px 2px 4px, rgb(71 63 79 / 16%) 0px 5px 10px;
+}
+
+.corpFeatures__icon {
+    margin-bottom: 25px;
+}
+
+.corpFeatures__title {
+    font-size: 22px;
+    line-height: 28px;
+}
 
  /* Services: Dev_Quốc Kỳ  */
+.corpServices__title h2 {
+    text-align: center;
+}
+
+.corpServices__item:hover .corpServices__link {
+    color: var(--primary-color);
+}
+
+.corpServices__img {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.corpServices__info {
+    padding: 0 20px;
+}
+
+.corpServices__link {
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 600;
+    text-align: center;
+    background: var(--bg-color);
+    padding: 12px 35px;
+    display: inline-block;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    transform: translateY(-25px);
+    box-shadow: rgb(1 1 1 / 5%) 1px 1px 5px 0px;
+}
+
+.dark .corpServices__link {
+    background-color: #151421;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.corpServices__info p {
+    margin-top: -10px;
+    font-size: 17px;
+    line-height: 27px;
+    color: var(--font-color);
+    opacity: 0.8;
+}
+
+.dark .corpServices__info p {
+    color: #c2c2c2;
+}
+
+.corpServices__btn {
+    display: block;
+    padding: 8px 35px;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--heading-color);
+    border-radius: var(--border-radius);
+}
 
 
  /* Gallery: Dev_Văn Dũng  */
@@ -441,12 +583,172 @@ html {
 
  /* Clients: Dev_Văn Dũng  */
 
-
  /* Progress: Dev_Quốc Kỳ  */
+ .corpProgress__info {
+    margin-bottom: 24px;
+}
+
+.corpProgress__info--last {
+    margin-bottom: 0;
+}
+
+.corpProgress__title {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dark .corpProgress__title {
+    color: #eee;
+}
+
+.corpProgress__wrap {
+    height: 4px;
+    overflow: unset;
+}
+
+.dark .corpProgress__wrap {
+    background-color: #100f19;
+}
+
+.corpProgress__percent {
+    position: relative;
+    overflow: unset;
+}
+.corpProgress--gradient1 {
+    color: #61fded;
+    background-color: #0d8abc;
+    background-image: linear-gradient(-224deg, #0d8abc, #61fded);
+}
+
+.corpProgress--gradient2 {
+    color: #eece90;
+    background-color: #d45529;
+    background-image: linear-gradient(-224deg, #d45529, #eece90);
+}
+
+.corpProgress--gradient3 {
+    color: #5c51ff;
+    background-color: #f646a9;
+    background-image: linear-gradient(-224deg, #f646a9, #5c51ff);
+}
+
+.corpProgress--gradient4 {
+    color: #e5529a;
+    background-color: #e77654;
+    background-image: linear-gradient(-224deg, #e77654, #e5529a);
+}
+
+.corpProgress__percent::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    opacity: 0.3;
+    border-radius: 50%;
+    border: 1px solid;
+    right: 0%;
+    top: 40%;
+    transform: translate(50%, -50%);
+}
+
+.corpProgress__percent::after {
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 3px solid;
+    background-color: var(--bg-color);
+    right: 0%;
+    top: 40%;
+    transform: translate(50%, -50%);
+}
 
 
  /* Testimonials: Dev_Quốc Kỳ  */
+.corpTesti {
+    background-color: var(--bg-lightgrey);
+}
 
+.dark .corpTesti {
+    background-color: #100f19;
+}
+
+.corpTesti__item {
+    padding: 40px 30px;
+    display: block;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.corpTesti__quote {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--font-color);
+    opacity: 0.8;
+}
+
+.dark .corpTesti__quote {
+    color: #eee;
+}
+
+.corpTesti__desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corpTesti__img {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.corpTesti__people {
+    text-align: left;
+}
+
+.corpTesti__people h2 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.corpTesti__list .owl-dots {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.corpTesti__list .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    margin: 1px 6px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.corpTesti__list .owl-dots .owl-dot:hover {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.corpTesti__list .owl-dots .owl-dot.active {
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.corpTesti__list .owl-dots .owl-dot span {
+    margin: 5px 2px;
+}
 
  /* Blog: Dev_Văn Dũng  */
  .news .title {
@@ -558,6 +860,12 @@ cursor: pointer;
 
 /* Responsive */
 @media screen and (max-width:992px) {
+    .title h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    /* Responsive Header */
     .corpHeader__list {
         text-align: center;
         padding-top: 20px;
@@ -592,16 +900,61 @@ cursor: pointer;
         border: none;
         font-size: 20px;
         color: #fff;
+        cursor: pointer;
     }
 
     #corpNavbar {
-        position: relative;
+        max-height: calc(100vh - 80px);
+        overflow-y: scroll;
     }
     
     .corpHeader__btn-wrap {
         position: absolute;
-        top: -53px;
-        right: 53px;
+        top: 25%;
+        right: 48px;
+        opacity: 0;
+        transition: all 0.5s;
     }
     
+    #iconClose {
+        display: none;
+    }
+
+    .corpHeader__input:checked ~ .corpHeader__toggler #iconClose {
+        display: block;
+    }
+
+    .corpHeader__input:checked ~ .corpHeader__toggler #iconBars {
+        display: none;
+    }
+
+    #corpNavbar.show .corpHeader__btn-wrap {
+        top: 6%;
+        right: 48px;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:768px) {
+    /* Features */
+    .corpFeatures__left p {
+        margin: 14px 0 26px;
+    }
+
+    /* Testimonials */
+    .corpTesti__item {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .title h2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    /* Features */
+    .corpFeatures__left p {
+        margin-bottom: 10px;
+    }
 }
