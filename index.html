@@ -31,7 +31,7 @@
       <div class="corpHeader__wrap container">
         <nav class="corpHeader__wrap-navbar navbar navbar-expand-lg navbar-light">
           <div class="corpHeader__logo">
-            <a class="corpHeader__color corpHeader__brand navbar-brand" href="index.html">
+            <a class="corpHeader__brand corpHeader__color navbar-brand" href="index.html">
                 <span>
                     <i class="fa fa-align-right"></i>
                     Corp Vision
@@ -39,17 +39,19 @@
                 <span>Vision to your Future</span>
             </a>
           </div>
-
+          <input type="checkbox" hidden style="cursor: pointer;" class="corpHeader__input" id="corpHeader__checked">
           <button class="corpHeader__toggler navbar-toggler" onclick="clickButton()" type="button" data-toggle="collapse" 
           data-target="#corpNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i id="iconBars" class="corpHeader__toggler-icon fa fa-bars"></i>
-            <!-- <i id="iconClose" class="corpHeader__toggler-icon fas fa-times"></i> -->
+            <label for="corpHeader__checked" class="corpHeader__mobile-btn">
+              <i id="iconBars" class="corpHeader__toggler-icon fa fa-bars"></i>
+              <i id="iconClose" class="corpHeader__toggler-icon fas fa-times"></i>
+            </label>
           </button>
         
           <div class="collapse navbar-collapse" id="corpNavbar">
             <ul class="corpHeader__list navbar-nav mx-lg-auto">
               <li class="corpHeader__item nav-item active">
-                <a id="corpNavbar__home" class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a id="corpNavbar__home" class="corpHeader__link nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="corpHeader__item nav-item">
                 <a class="corpHeader__color corpHeader__link nav-link" href="#">About</a>
@@ -577,6 +579,7 @@
         var i;  
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
           document.getElementById("corpHeader").style.padding = "5px 0px";
+          document.getElementById("corpHeader").style.borderBottom = "transparent";
           document.getElementById("corpHeader").style.boxShadow = "0 3px 6px 0 rgb(0 0 0 / 5%)";
           document.getElementById("corpHeader").style.backgroundColor = "currentColor";
           document.getElementById("corpNavbar__home").style.color = "#009f4d";
@@ -585,8 +588,8 @@
           }
         } else {
           document.getElementById("corpHeader").style.padding = "15px 0px";
+          document.getElementById("corpHeader").style.borderBottom = "1px solid rgba(231, 231, 231, 0.18)";
           document.getElementById("corpHeader").style.boxShadow = "0 0 0 0px #fff";
-
           document.getElementById("corpHeader").style.backgroundColor = "transparent";
           document.getElementById("corpNavbar__home").style.color = "#fff";
           for (i = 0; i < x.length; i++) {

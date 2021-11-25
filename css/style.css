@@ -28,7 +28,7 @@
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
-    transition: all 0.6s linear;
+    /* transition: all 0.5s linear; */
     transition: width none;
 }
 
@@ -38,12 +38,16 @@ html, body {
     scroll-behavior: smooth;
 }
 
-a:hover {
+body a {
+    transition: all 0.5s;
+}
+
+body a:hover {
     text-decoration: none;
     color: currentColor;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, ul {
+h1, h2, h3, h4, h5, h6, p, span, ul, label {
     margin: 0;
 }
 
@@ -127,11 +131,13 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 
 #switchButton .fa-sun {
     display: none;
+    line-height: 45px;
 }
 
 #switchButton .fa-moon {
     display: block;
     color: white;
+    line-height: 45px;
 }
 
 /* Dark Theme*/
@@ -157,10 +163,9 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
     width: 100%;
     height: auto;
     padding: 15px 0;
-    border-bottom: 1px solid rgba(231, 231, 231, 0.18);
     display: grid;
     align-items: center;
-    transition: all 0.4s ease 0s;
+    transition: all 0.3s ease 0s;
     /* dùng cho currentColor để đổi màu navbar khi scroll */
     color: #fff;
     /* display: none; */
@@ -169,10 +174,10 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 .dark .corpHeader {
     /* dùng cho currentColor để đổi màu navbar khi scroll */
     color: var(--bg-dark-color);
-    border-bottom: none;
 }
 
 .corpHeader__wrap-navbar {
+    position: relative;
     padding: 8px 0;
 }
 
@@ -215,7 +220,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 #corpNavbar .corpHeader__link {
     color: #fff;
     opacity: 0.8;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 #corpNavbar .corpHeader__link:hover {
@@ -292,7 +297,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 }
 
 .corpHeader__search {
-    margin-right: 16px;
+    margin-right: 12px;
     width: 45px;
     height: 45px;
     text-align: center;
@@ -321,6 +326,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul {
 .dark .corpHeader .corpHeader__color {
     color: var(--heading-dark-color) !important;
 }
+
  /* Carousel: Dev_Văn Dũng  */
 
 
@@ -894,18 +900,39 @@ cursor: pointer;
         border: none;
         font-size: 20px;
         color: #fff;
+        cursor: pointer;
     }
 
     #corpNavbar {
-        position: relative;
+        max-height: calc(100vh - 80px);
+        overflow-y: scroll;
     }
     
     .corpHeader__btn-wrap {
         position: absolute;
-        top: -53px;
-        right: 53px;
+        top: 25%;
+        right: 48px;
+        opacity: 0;
+        transition: all 0.5s;
     }
     
+    #iconClose {
+        display: none;
+    }
+
+    .corpHeader__input:checked ~ .corpHeader__toggler #iconClose {
+        display: block;
+    }
+
+    .corpHeader__input:checked ~ .corpHeader__toggler #iconBars {
+        display: none;
+    }
+
+    #corpNavbar.show .corpHeader__btn-wrap {
+        top: 6%;
+        right: 48px;
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width:768px) {
