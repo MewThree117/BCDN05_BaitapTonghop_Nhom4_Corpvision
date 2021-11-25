@@ -15,8 +15,10 @@
     <!-- CDN Animate.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- image Lightbox -->
-   <link rel="stylesheet" href="./Js/lightbox2-2.11.3/lightbox2-2.11.3/dist/css/lightbox.css">
-
+    <link rel="stylesheet" href="./Js/lightbox2-2.11.3/lightbox2-2.11.3/dist/css/lightbox.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./Owl_Carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./Owl_Carousel/owl.theme.default.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,7 +27,7 @@
 </head>
 <body id="myBody">
     <!-- Header: Dev_Quốc Kỳ -->
-    <header id="corpHeader" class="corpHeader">
+    <header class="corpHeader" id="corpHeader">
       <div class="corpHeader__wrap container">
         <nav class="corpHeader__wrap-navbar navbar navbar-expand-lg navbar-light">
           <div class="corpHeader__logo">
@@ -201,7 +203,7 @@
     </section>
 
     <!-- Services: Dev_Quốc Kỳ -->
-    <section class="corpServices py-5">
+    <section class="corpServices py-5" id="services">
       <div class="container py-lg-5 py-md-4 py-2">
         <div class="corpServices__title title">
           <h2>Always there for your care, our Services</h2>
@@ -352,10 +354,142 @@
     <section class="corpClients"></section>
 
     <!-- Progress: Dev_Quốc Kỳ -->
-    <section class="corpProgress"></section>
+    <section class="corpProgress py-5" id="progress">
+      <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <img src="./image/Progress/pro1.jpg" alt="" class="radius-image img-fluid">
+          </div>
+          <div class="col-lg-6 mt-lg-0 mt-md-5 mt-4">
+            <div class="title">
+              <h3>YOUR SUCCESS IS OUR SUCCESS</h3>
+              <h2 class="mb-4 mpb-lg-2">Web design, marketing & SEO solutions that get results</h2>
+            </div>
+            <div class="corpProgress__info">
+              <h6 class="corpProgress__title" style="width: 80%;">
+                Marketing
+                <span>80%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient1 progress-bar" role="progressbar" style="width: 80%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="corpProgress__info">
+              <h6 class="corpProgress__title" style="width: 95%;">
+                Responsive Web design
+                <span>95%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient2 progress-bar" role="progressbar" style="width: 95%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="corpProgress__info">
+              <h6 class="corpProgress__title" style="width: 60%;">
+                Analytics
+                <span>60%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient3 progress-bar" role="progressbar" style="width: 60%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="corpProgress__info corpProgress__info--last">
+              <h6 class="corpProgress__title" style="width: 85%;">
+                Web Development
+                <span>85%</span>
+              </h6>
+              <div class="corpProgress__wrap progress">
+                <div class="corpProgress__percent corpProgress--gradient4 progress-bar" role="progressbar" style="width: 85%; height: 4px;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Testimonials: Dev_Quốc Kỳ -->
-    <section class="corpTestimonials"></section>
+    <section class="corpTesti py-5" id="testimoals">
+      <div class="container py-lg-4 py-md-3 py-2 pb-lg-0">
+        <div class="title">
+          <h3 class="text-center mb-1">HAPPY CLIENTS FEEDBACK</h3>
+          <h2 class="text-center mb-sm-5 mb-4">Reviews and Testimonials</h2>
+        </div>
+        <div class="corpTesti__list owl-carousel">
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. 
+                Velit beatae laudantium voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Esse architecto est ea sunt eligendi cum?
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team1.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!.
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team2.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!.
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team3.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+          <div class="corpTesti__item">
+            <div class="corpTesti__quote mb-4">
+              <p>
+                Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                Dolores molestias adipisci dolo amet!.
+              </p>
+            </div>
+            <div class="corpTesti__desc">
+              <div class="corpTesti__img">
+                <img src="./image/Testimonials/team4.jpg" alt="client-img" class="img-fluid">
+              </div>
+              <div class="corpTesti__people title">
+                <h2>John wilson</h2>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Blog: Dev_Văn Dũng -->
     <section class="corpBlog"></section>
@@ -496,6 +630,20 @@
     sanitizeTitle: false
   })
   </script>
+
+  <!-- Owl Carousel -->
+  <script src="./Owl_Carousel/owl.carousel.min.js"></script>
+  <script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        items:1,
+        loop:true,
+        autoplay: false,
+        smartSpeed: 500,
+        dot:true,
+        dotsEach: true,
+    });
+</script>
   
 </body>
 </html>
