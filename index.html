@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- fontAwsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <!-- CDN Animate.CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- image Lightbox -->
@@ -19,6 +22,15 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="./Owl_Carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="./Owl_Carousel/owl.theme.default.min.css">
+   
+
+    <!-- slick -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -94,24 +106,94 @@
     <!-- Slider: Dev_Văn Dũng -->
     <section class="corpCarousel">
 
-      <div class="corpCarousel__content">
-        <div class="corpCarousel-wraper">
-          <div class="corpCarousel-slide">
-           <div class="corpCarousel__img">
-             <img src="./image/Carousel/b1.jpg" alt="">
-               <div class="corpCarousel__content">
-                 <h1> We will solve your issues our vision to your future</h1>
-                 <p>Lorem ipsum dolor sit amet, elit, sed do eiusmod ut labore et
-                   dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut ea. </p>
-                   <div class="corpCarousel__btn">
-                      <a href="#" class="btn btn-primary"></a>
-                   </div>
-               </div>
-               <div class="corpCarousel__overlay"></div>
-           </div>
+      <div class="corpCarousel__container carousel slide carousel-fade" data-bs-ride="carousel" id="corpCarousel__id">
+          <div class="corpCarousel__wrapper carousel-inner">
+          <div class=" swiper-slide carousel-item active ">
+           <div class="corpCarousel__item">
+               <div class="corpCarousel__img" style="background: url(./image/Carousel/b1.jpg); background-size: cover;background-position: top;background-size: cover;background-repeat: no-repeat,no-repeat,no-repeat; " ></div>
+                  <div class="corpCarousel__content container">
+                  <h1 class="animate__animated animate__flipInX "> We will solve your issues our vision to your future</h1>
+                  <p class="animate__animated animate__fadeInDown">Lorem ipsum dolor sit amet, elit, sed do eiusmod ut labore et
+                    dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut ea. </p>
+                    <div class="corpCarousel__btn animate__animated animate__fadeInUp">
+                       <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+              <div id="corpCarousel__overlay"  class="corpCarousel__overlay"></div>
+            </div>
+
           </div>
-        </div>
+
+          <div class="swiper-slide carousel-item ">
+            <div class="corpCarousel__item">
+              <div class="corpCarousel__img" style="background: url(./image/Carousel/b2.jpg); background-size: cover;background-position: top;background-size: cover;background-repeat: no-repeat,no-repeat,no-repeat; " ></div>
+                   <div class="corpCarousel__content container">
+                   <h1  class="animate__animated animate__fadeInDown ">
+                    Embracing success do our best, need best advice          </h1>
+                   <p  class="animate__animated animate__fadeInDown">Lorem ipsum dolor sit amet, elit, sed do eiusmod ut labore et
+                     dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut ea. </p>
+                     <div class="corpCarousel__btn animate__animated animate__fadeInDown">
+                        <a href="#" class="btn">Learn More</a>
+                     </div>
+                 </div>
+              
+               <div id="corpCarousel__overlay1" class="corpCarousel__overlay"></div>
+              </div>
+           </div>
+
+           <div class="swiper-slide carousel-item fadeIn">
+            <div class="corpCarousel__item">
+              <div class="corpCarousel__img" style="background: url(./image/Carousel/b3.jpg); background-size: cover;background-position: top;background-size: cover;background-repeat: no-repeat,no-repeat,no-repeat; " ></div>
+                   <div class="corpCarousel__content container">
+                   <h1 class="animate__animated animate__fadeInUp"> 
+                    Digital transformation driven by technology</h1>
+                   <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, elit, sed do eiusmod ut labore et
+                     dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut ea. </p>
+                     <div class="corpCarousel__btn animate__animated animate__fadeInDown">
+                        <a href="#" class="btn">Learn More</a>
+                     </div>
+                 </div>
+              
+               <div id="corpCarousel__overlay2"  class="corpCarousel__overlay"></div>
+              </div>
+           </div>
+
+           <div class="swiper-slide carousel-item">
+            <div class="corpCarousel__item">
+              <div class="corpCarousel__img" style="background: url(./image/Carousel/b4.jpg); background-size: cover;background-position: top;background-size: cover;background-repeat: no-repeat,no-repeat,no-repeat; " ></div>
+                   <div class="corpCarousel__content container">
+                   <h1 class="animate__animated animate__flipInX"> For those who believe in leaving a mark</h1>
+                   <p class="animate__animated animate__fadeInDown">Lorem ipsum dolor sit amet, elit, sed do eiusmod ut labore et
+                     dolore magna aliqua. Ut enim ad minim veniam, quis nisi ut ea. </p>
+                     <div class="corpCarousel__btn animate__animated animate__fadeInUp">
+                        <a href="#" class="btn">Learn More</a>
+                     </div>
+                 </div>
+              
+               <div id="corpCarousel__overlay3"  class="corpCarousel__overlay"></div>
+              </div>
+           </div>
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-target="#corpCarousel__id" data-slide="prev">
+            <span id="carousel-control__btn" class="carousel-control__btn fas fa-arrow-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-target="#corpCarousel__id" data-slide="next">
+            <span id="carousel-control__btn1" class="carousel-control__btn fas fa-arrow-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+          <div class="corpCarousel__wave" id="corpCarousel__wave">
+            
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+             <path fill-opacity="1" id="someday" class="something">
+               <animate attributeName="d" dur="20000ms" repeatCount="indefinite" values="M0,160L48,181.3C96,203,192,245,288,261.3C384,277,480,267,576,234.7C672,203,768,149,864,117.3C960,85,1056,75,1152,90.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z; M0,160L48,181.3C96,203,192,245,288,234.7C384,224,480,160,576,133.3C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;												 M0,64L48,74.7C96,85,192,107,288,133.3C384,160,480,192,576,170.7C672,149,768,75,864,80C960,85,1056,171,1152,181.3C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                 M0,160L48,181.3C96,203,192,245,288,261.3C384,277,480,267,576,234.7C672,203,768,149,864,117.3C960,85,1056,75,1152,90.7C1248,107,1344,149,1392,170.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;"></animate>
+             </path>
+           </svg>
+          </div>
       </div>
+
     </section>
 
     <!-- About Us: Dev_Quốc Kỳ -->
@@ -272,7 +354,7 @@
     </section>
 
     <!-- Gallery: Dev_Văn Dũng -->
-    <section class="success">
+    <section id="success" class="success">
       <div class="container">
           <div class="title">
               <h3>OUR GALLERY</h3>
@@ -348,8 +430,8 @@
               </div>
           </div>
           <div class="logo">
-              
-              <div class="row logo__wrap">
+               
+              <div id="logo__wrap" class="row logo__wrap">
                   <div class="col-4 col-md-3 col-lg-2 logo__img">
                       <img src="./image/Logo/brand1.png" alt="">
                   </div>
@@ -525,10 +607,10 @@
           </div>
           <div class="row news__wrap">
               <div class="col-lg-4 col-md-6 news__item">
-                  <div class="news__img">
+                  <div id="news__img" class="news__img">
                       <img src="./image/News/blog1.jpg" alt="">
                   </div>
-                  <div class="news__content">
+                  <div id="news__content" class="news__content">
                       <h3><a href="#">Startup Business</a></h3>
                       <h2><a href="#">Hello world!</a></h2>
                       <div class="news__footer">
@@ -542,10 +624,10 @@
                   </div>
               </div>
               <div class="col-lg-4 col-md-6 news__item">
-                  <div class="news__img">
+                  <div id="news__img1" class="news__img">
                       <img src="./image/News/blog2.jpg" alt="">
                   </div>
-                  <div class="news__content">
+                  <div id="news__content1" class="news__content">
                       <h3><a href="#">Startup Business</a></h3>
                       <h2><a href="#">Companies in NY launched a joint project on a three-tower hall</a></h2>
                       <div class="news__footer">
@@ -559,10 +641,10 @@
                   </div>
               </div>
               <div class="col-lg-4 col-md-6 news__item">
-                  <div class="news__img">
+                  <div id="news__img2" class="news__img">
                       <img src="./image/News/blog3.jpg" alt="">
                   </div>
-                  <div class="news__content">
+                  <div id="news__content2" class="news__content">
                       <h3><a href="#">Marketing Strategy</a></h3>
                       <h2><a href="#">Design breakthrough upgrades the product and ready to launch</a></h2>
                       <div class="news__footer">
@@ -581,14 +663,93 @@
 
     <!-- Footer: Dev_Văn Dũng -->
     <footer>
-        <!-- Contact Us: Dev_Văn Dũng -->
-        <section class="corpContact"></section>
+      
+        <div class="footer__container">
+          <div class="container">
+            <div class="footer__subscribe">
+              <div class="title">
+                <h3>Let’s find out how to work together</h3>
+                <p>Lorem ipsum dolor sit amet elit. Velit beatae rem ullam dolore nisi esse quasi, sit amet. <br> Lorem ipsum dolor sit amet elit.  </p>
+              </div>
+              <form class="footer__input">
+                <div class="fa fa-paper-plane"></div>
+                <input type="text" placeholder="Your Email Address"> 
+                <a class="footer__btn">Subscribe</a>
+              </form>
+            </div>
 
-        <!-- Copyright: Dev_Văn Dũng -->
-        <section class="corpCopyright"></section>
+            </div>
+
+        </div>
+
+        
+          <!-- Contact Us: Dev_Văn Dũng -->
+          <div class="corpContact">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer__logo">
+                      <a class="footer__home" href="#">
+                        <span class="fa fa-align-right"></span>
+                        Corp Vision
+                        <span class="descript">Vision to your Future</span>
+                      </a>
+                        <p class="footer__detail">
+                          Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet Semper at elit team advisors.
+                        </p>
+                        <ul class="footer__socials">
+                          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                  <ul class="footer__contact">
+                    <h3 class="footer__heading">CONTACT INFO</h3>
+                    <li>Address : Corp Vision, 343 marketing, #21 cravel 1st lane street, NY - 62617.</li>
+                    <li>Phone Number : <a href="#">+1(21) 234 4567</a></li>
+                    <li>Email : <a href="#">info@example.com</a></li>
+                    <li>Support : <a href="#">info@support.com</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                  <ul class="footer__contact">
+                    <h3 class="footer__heading">CATEGORIES</h3>
+                    <li><a href="#">Marketing Strategy</a></li>
+                    <li><a href="#">Startup Business</a></li>
+                    <li><a href="#">Web development</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                  <ul class="footer__contact">
+                    <h3 class="footer__heading">META</h3>
+                    <li><a href="#">Log in</a></li>
+                    <li><a href="#">Entries feed</a></li>
+                    <li><a href="#">Comments feed</a></li>
+                    <li><a href="#">WordPress.org</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+          <!-- Copyright: Dev_Văn Dũng -->
+          <div class="corpCopyright">
+            <div class="container">
+              <span>© 2021 Corp Vision All Rights Reserved</span>
+              <span>WordPress Theme by <a href="#">W3Layouts.</a></span>
+
+            </div>
+          </div>
+
+       
     </footer>
     <!-- Back to top: Dev_Văn Dũng -->
-
+    <a href="#" class="backToTop cd-top text-replace js-cd-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
     <!-- Javascript -->
     <!-- Thay đổi background-color khi scroll -->
     <script>
@@ -630,6 +791,30 @@
     <script>
       document.getElementById("switchButton").onclick = function () {
         document.getElementById("myBody").classList.toggle("dark");
+        // xử lí wave
+        document.getElementById("someday").classList.toggle("active");
+        // xử lí theme success
+        document.getElementById("success").classList.toggle("active");
+        // xử lí boder logo
+        document.getElementById("logo__wrap").classList.toggle("active");
+      //  xử lí overlay carousel
+        document.getElementById("corpCarousel__overlay").classList.toggle("active");
+        document.getElementById("corpCarousel__overlay1").classList.toggle("active");
+        document.getElementById("corpCarousel__overlay2").classList.toggle("active");
+        document.getElementById("corpCarousel__overlay3").classList.toggle("active");
+      //  xử lí nút carousel
+        document.getElementById("carousel-control__btn").classList.toggle("active");
+        document.getElementById("carousel-control__btn1").classList.toggle("active");
+        
+        // xử lí boder news
+        document.getElementById("news__img").classList.toggle("active");
+        document.getElementById("news__img1").classList.toggle("active");
+        document.getElementById("news__img2").classList.toggle("active"); 
+        document.getElementById("news__content").classList.toggle("active");
+        document.getElementById("news__content1").classList.toggle("active");
+        document.getElementById("news__content2").classList.toggle("active");
+         
+        
       };
     </script>
    <!-- image lightbox -->
@@ -642,10 +827,6 @@
     fadeDuration: 200,
     fitImagesInViewport: true,
     imageFadeDuration: 200,
-  //   maxWidth: 800,
-  //   maxHeight: 600,
-  //   positionFromTop: 50,
-  //   resizeDuration: 700,
     showImageNumberLabel: true,
     wrapAround: false, 
   
@@ -653,6 +834,16 @@
     sanitizeTitle: false
   })
   </script>
+ 
+ <!-- news carousel -->
+ <script>
+   var myCarousel = document.querySelector('#carouselExampleFade')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 5000,
+   
+})
+ </script>
+ 
 
   <!-- Owl Carousel -->
   <script src="./Owl_Carousel/owl.carousel.min.js"></script>
@@ -667,6 +858,8 @@
         dotsEach: true,
     });
 </script>
-  
+  <!-- backtopTop -->
+  <script src="./Js/back-to-top-master/assets/js/main.js"></script>
+<script src="./Js/back-to-top-master/assets/js/util.js"> </script>
 </body>
 </html>
