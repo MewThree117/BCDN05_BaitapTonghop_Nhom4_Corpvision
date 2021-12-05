@@ -166,6 +166,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, label {
     display: grid;
     align-items: center;
     transition: all 0.3s ease 0s;
+    border-bottom: 1px solid rgba(231, 231, 231, 0.18);
     /* dùng cho currentColor để đổi màu navbar khi scroll */
     color: #fff;
     /* display: none; */
@@ -221,6 +222,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, label {
     color: #fff;
     opacity: 0.8;
     transition: all 0.3s;
+    padding: 6px 0;
 }
 
 #corpNavbar .corpHeader__link:hover {
@@ -1216,6 +1218,18 @@ body .backToTop  a:hover {
     }
 
     /* Responsive Header */
+    .corpHeader {
+        padding: 17px 0;
+    }
+
+    .corpHeader__logo .corpHeader__brand {
+        font-size: 32px;
+    }
+
+    .corpHeader__wrap-navbar{
+        padding: 0 0;
+    }
+
     .corpHeader__list {
         text-align: center;
         padding-top: 20px;
@@ -1279,7 +1293,7 @@ body .backToTop  a:hover {
     }
 
     #corpNavbar.show .corpHeader__btn-wrap {
-        top: 6%;
+        top: 4%;
         right: 48px;
         opacity: 1;
     }
