@@ -162,7 +162,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, label {
     z-index: 10;
     width: 100%;
     height: auto;
-    padding: 15px 0;
+    padding: 20px 0;
     display: grid;
     align-items: center;
     transition: all 0.3s ease 0s;
@@ -187,6 +187,7 @@ h1, h2, h3, h4, h5, h6, p, span, ul, label {
     font-weight: 600;
     line-height: 1.2;
     color: #fff;
+    padding: 0;
 }
 
 .corpHeader__logo .corpHeader__brand:hover {
@@ -1236,11 +1237,11 @@ body .backToTop  a:hover {
     }
 
     .corpHeader__dropdown-menu.show::before {
-        top: 34px;
+        top: 30px;
     }
 
     .dark .corpHeader__dropdown-menu.show::before {
-        top: 34px;
+        top: 30px;
     }
 
     .corpHeader__dropdown-menu {
@@ -1293,9 +1294,18 @@ body .backToTop  a:hover {
     }
 
     #corpNavbar.show .corpHeader__btn-wrap {
-        top: 4%;
+        top: 7px;
         right: 48px;
         opacity: 1;
+    }
+
+    .corpHeader__search {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .corpHeader__search i {
+        line-height: 40px;
     }
 
     /* Carosel */
@@ -1328,6 +1338,10 @@ body .backToTop  a:hover {
 }
   
 @media screen and (max-width:768px) {
+    /* Header */
+    #corpNavbar.show .corpHeader__btn-wrap {
+        top: 7px;
+    }
     /* Features */
     .corpFeatures__left p {
         margin: 14px 0 26px;
@@ -1420,8 +1434,30 @@ body .backToTop  a:hover {
 }
 
 @media screen and (max-width:480px) { 
+    .title h2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .btn {
+        padding: 12px 30px;
+    }
+    /* Header */
+    .corpHeader__logo .corpHeader__brand {
+        font-size: 26px;
+    }
+
+    .corpHeader__logo span:last-child {
+        font-size: 13px;
+        padding-left: 38px;
+    }
+
+    #corpNavbar.show .corpHeader__btn-wrap {
+        top: 1%;
+    }
+
       /* Carosel */
     .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 }
