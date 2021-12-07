@@ -595,10 +595,11 @@ h1, h2, h3, h4, h5, h6, p, span, ul, label {
 
  /* Gallery: Dev_Văn Dũng  */
  .success {
-    background-color: var(--border-color-light);
+    background: var(--bg-lightgrey);
+    padding: 100px 0;
 } 
 .success.active {
-    background-color: var(--bg-dark-color);
+    background-color:#100f19;
 
 }
 .success .title {
@@ -1149,7 +1150,7 @@ cursor: pointer;
     background-color: #151421;
     border-top: 1px solid #33333B;
 }
-.corpCopyright span{
+.corpCopyright p{
      font-size: 18px;
     color: #7F8A94;
     margin: 22px 0;
@@ -1160,21 +1161,13 @@ cursor: pointer;
     margin-right: 10px;
 }
 
-.corpCopyright span:last-child::before  {
-    content: '';
-    position: absolute;
-    height: 18px;
-    left: -8px;
-    top: 4px;
-    border: 1px solid #7F8A94;
-     
-}
 
-.corpCopyright span:last-child a {
-    color: var(--primary-color);
+
+.corpCopyright p:last-child a {
+    color: #067640;
     transition: all .6s;
 }
-.corpCopyright span:last-child a:hover {
+.corpCopyright p:last-child a:hover {
     color: #fff;
 }
 /* backtoTOp: Dev_Tran_Van_Dung */
@@ -1334,7 +1327,15 @@ body .backToTop  a:hover {
         top: -203px;
        left: 80%;
     }
-  
+
+    /* footer */
+    .footer__subscribe .title h3 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .footer__logo {
+        padding-bottom: 50px;
+    }
 }
   
 @media screen and (max-width:768px) {
@@ -1352,6 +1353,9 @@ body .backToTop  a:hover {
         padding: 20px 30px;
     }
     /* Carosel */
+    .corpCarousel .carousel {
+        height: 650px;
+    }
     .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
         font-size: 45px;
     }
@@ -1369,7 +1373,7 @@ body .backToTop  a:hover {
         height: 81.2%;
     }
     .corpCarousel__container .corpCarousel__wave {
-        bottom: 48px;
+        bottom: -1px;
     }
     .corpCarousel__container .carousel-control-prev {
         top: -250px;
@@ -1383,6 +1387,32 @@ body .backToTop  a:hover {
     .news__item .news__content .news__footer::before {
         width: 109.6%;
     }
+     /* footer */
+     .footer__subscribe .title h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+     .corpContact {
+         padding: 50px 0 10px 0;
+     }
+    .footer__logo {
+        padding-bottom: 50px;
+    }
+    .footer__contact {
+        padding-bottom: 30px;
+
+    }
+     .corpCopyright {
+         padding: 20px 0;
+     }
+     .corpCopyright span:first-child {
+         margin-right: 7px;
+     }
+    .corpCopyright span {
+        display: inline;
+        margin: 0 0px;
+    }
+    
     
 }
 
@@ -1397,6 +1427,9 @@ body .backToTop  a:hover {
         margin-bottom: 10px;
     }
     /* Carosel */
+    .corpCarousel .carousel {
+        height: 600px;
+    }
     .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
         font-size: 40px;
     }
@@ -1411,7 +1444,7 @@ body .backToTop  a:hover {
     }
    
     .corpCarousel__container .corpCarousel__wave {
-        bottom: 100px;
+        bottom: 0px;
     }
     .corpCarousel__container .carousel-control-prev {
         top: -288px;
@@ -1422,6 +1455,12 @@ body .backToTop  a:hover {
         top:-337px;
         left:84%;
     }
+    /* footer */
+    .footer__subscribe .title h3 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    
     .footer__logo {
         padding-bottom: 50px;
     }
@@ -1439,9 +1478,7 @@ body .backToTop  a:hover {
         line-height: 32px;
     }
 
-    .btn {
-        padding: 12px 30px;
-    }
+   
     /* Header */
     .corpHeader__logo .corpHeader__brand {
         font-size: 26px;
@@ -1457,7 +1494,127 @@ body .backToTop  a:hover {
     }
 
       /* Carosel */
+      .corpCarousel .carousel {
+        height: 550px;
+    }
+      .corpCarousel .corpCarousel__item .corpCarousel__img {
+        min-height: 550px;
+    }
+    .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
+        font-size: 36px;
+    }
+    .corpCarousel .corpCarousel__item .corpCarousel__content {
+        top: -404px;
+    }
+    
+    .corpCarousel .corpCarousel__item .corpCarousel__overlay {
+        height: 68.8%;
+    }
+   
+    .corpCarousel__container .corpCarousel__wave {
+        bottom: 0px;
+    }
+    .corpCarousel__container .carousel-control-prev {
+        top: -358px;
+        left:67%;
+
+    }
+    .corpCarousel__container .carousel-control-next {
+        top:-403px;
+        left:80%;
+    }
+    .corpCarousel__container .carousel-control-prev span,
+.corpCarousel__container .carousel-control-next span{
+    
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    z-index: 8;
+   
+   }
+   .corpCopyright {
+       text-align: center;
+   }
+    .footer__logo {
+        padding-bottom: 50px;
+    }
+    .footer__socials {
+        padding-top: 20px;
+    }
+    .footer__contact {
+        padding-bottom: 40px;
+    }
+    
+}
+
+@media screen and (max-width:480px) {  
+
+
+    .corpCarousel__container .carousel-control-next {
+        top: -403px;
+        left: 82%;
+    }
+    .corpCarousel__container .carousel-control-prev {
+        top: -358px;
+        left: 70%;
+    }
+
+    /* footer*/
+    .corpCopyright p {
+        
+        margin: 8px -17px;
+        
+        letter-spacing: 0.1px;
+        
+    }
+}
+
+@media screen and (max-width: 415px){
+     .btn {
+        padding: 12px 30px;
+    }
+    /* logo */
+    .logo__wrap .logo__img img {
+        padding-right: 10px;
+    }
+    /* carousel */
+    .corpCarousel .corpCarousel__item .corpCarousel__content {
+        top: -386px;
+    }
     .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
         font-size: 32px;
     }
+    .corpCarousel__container .carousel-control-next {
+        top: -403px;
+        left: 80%;
+    }
+    .corpCarousel__container .carousel-control-prev {
+        top: -358px;
+        left: 66%;
+    }
+    /* footer */
+    .footer__subscribe .title h3 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+@media screen and (max-width: 375px){
+    .btn {
+       padding: 12px 30px;
+   }
+   .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
+    font-size: 27px;
+}
+   /* .corpCopyright p {
+    margin: 8px -2px;
+    letter-spacing: 0.8px;
+} */
+   /* logo */
+   .logo__wrap .logo__img img {
+       padding-right: 0px;
+   }
+   /* footer */
+   .footer__subscribe .title h3 {
+       font-size: 24px;
+   }
 }
