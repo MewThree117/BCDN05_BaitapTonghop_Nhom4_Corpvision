@@ -596,7 +596,6 @@ h1, h2, h3, h4, h5, h6, p, span, ul, label {
  /* Gallery: Dev_Văn Dũng  */
  .success {
     background: var(--bg-lightgrey);
-    padding: 100px 0;
 } 
 .success.active {
     background-color:#100f19;
@@ -895,17 +894,10 @@ h1, h2, h3, h4, h5, h6, p, span, ul, label {
  }
  .news .title {
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 50px;
-    
 }
-.news .title h3 {
-    margin-bottom: 14px;
-}
+
 .news__item {
     border: 1px solid transparent;
- 
-
 }
 .news__item .news__img {
     box-shadow: 0 25px 98px 0 rgb(0 0 0 / 4%);
@@ -961,6 +953,11 @@ cursor: pointer;
     margin-top: 10px;
     transition: all 0.5s;
 }
+
+.dark .news__item .news__content h2 a {
+    color: #eee;
+}
+
 .news__item .news__content h2:hover a {
     color: var(--primary-color);
 } 
@@ -979,28 +976,45 @@ cursor: pointer;
  width: 114.6%;
  border: 1px solid #eee;
 }
+
+.news__item .news__content .news__footer img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
 .news__item .news__content .news__footer  a {
     font-size: 16px;
     color: var(--heading-color);
     font-weight: 600;
     line-height: 26px;
 }
+
+.dark .news__item .news__content .news__footer  a {
+    color: #eee;
+}
+
+.news__item .news__content .news__footer span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 26px;
+    color: #999;
+}
+
 .news__item .news__content .news__footer  a:hover {
     color: var(--primary-color);
 
 } 
-.news__item .news__content .news__footer  a span {
-    font-size: 16px;
-    color: #999;
 
-}
 .news__item .news__content .news__footer p {
     margin-bottom: 0;
     font-size: 16px;
     color: #999;
 }
- /* Research: Dev_Văn Dũng  */
 
+.news__item .news__content .news__footer .news__footer-wrap {
+    flex: 1;
+    margin-right: 10px;
+}
 
  /* Footer: Dev_Văn Dũng  */
 .footer__container {
@@ -1017,14 +1031,11 @@ cursor: pointer;
 .footer__subscribe {
     max-width: 700px;
     margin: 0 auto;
-    padding-bottom: 100px;
 }
 
 .footer__container .title h3 {
     font-size: 35px;
     color: #fff;
-    padding-top: 100px;
-    margin-bottom: 24px;
 }
 .footer__container .title p {
     font-size: 17px;
@@ -1076,9 +1087,7 @@ cursor: pointer;
 
  /* Contact Us: Dev_Văn Dũng  */
 .corpContact {
-    
     background: var(--bg-dark-color);
-    padding: 70px 0;
 }
 
 .footer__logo .footer__home{
@@ -1347,7 +1356,10 @@ body .backToTop  a:hover {
     .corpFeatures__left p {
         margin: 14px 0 26px;
     }
-
+    .corpFeatures__grid-item {
+        padding: 1.5rem;
+    }
+    
     /* Testimonials */
     .corpTesti__item {
         padding: 20px 30px;
@@ -1426,12 +1438,21 @@ body .backToTop  a:hover {
     .corpFeatures__left p {
         margin-bottom: 10px;
     }
+    .corpFeatures__grid-item img {
+        width: 45px;
+    }
+    .corpFeatures__grid-item h4 {
+        margin-bottom: 7px;
+    }
+    .corpFeatures__title {
+        font-size: 18px;
+    }
     /* Carosel */
     .corpCarousel .carousel {
         height: 600px;
     }
     .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
-        font-size: 40px;
+        font-size: 45px;
     }
     .corpCarousel .corpCarousel__item .corpCarousel__content {
         top: -404px;
@@ -1478,7 +1499,6 @@ body .backToTop  a:hover {
         line-height: 32px;
     }
 
-   
     /* Header */
     .corpHeader__logo .corpHeader__brand {
         font-size: 26px;
@@ -1493,6 +1513,10 @@ body .backToTop  a:hover {
         top: 1%;
     }
 
+    /* Fearture */
+    .corpFeatures__grid-item {
+        padding: 1.5rem -1rem;
+    }
       /* Carosel */
       .corpCarousel .carousel {
         height: 550px;
@@ -1516,15 +1540,15 @@ body .backToTop  a:hover {
     }
     .corpCarousel__container .carousel-control-prev {
         top: -358px;
-        left:67%;
+        left:70%;
 
     }
     .corpCarousel__container .carousel-control-next {
         top:-403px;
-        left:80%;
+        left:82%;
     }
     .corpCarousel__container .carousel-control-prev span,
-.corpCarousel__container .carousel-control-next span{
+    .corpCarousel__container .carousel-control-next span{
     
     width: 45px;
     height: 45px;
@@ -1544,22 +1568,6 @@ body .backToTop  a:hover {
     .footer__contact {
         padding-bottom: 40px;
     }
-    
-}
-
-@media screen and (max-width:480px) {  
-
-
-    .corpCarousel__container .carousel-control-next {
-        top: -403px;
-        left: 82%;
-    }
-    .corpCarousel__container .carousel-control-prev {
-        top: -358px;
-        left: 70%;
-    }
-
-    /* footer*/
     .corpCopyright p {
         
         margin: 8px -17px;
@@ -1569,8 +1577,9 @@ body .backToTop  a:hover {
     }
 }
 
+
 @media screen and (max-width: 415px){
-     .btn {
+    .btn {
         padding: 12px 30px;
     }
     /* logo */
@@ -1598,13 +1607,15 @@ body .backToTop  a:hover {
         line-height: 32px;
     }
 }
-@media screen and (max-width: 375px){
+
+@media screen and (max-width:376px){
     .btn {
        padding: 12px 30px;
    }
    .corpCarousel .corpCarousel__item .corpCarousel__content h1 {
-    font-size: 27px;
-}
+       font-size: 28px;
+   }
+
    /* .corpCopyright p {
     margin: 8px -2px;
     letter-spacing: 0.8px;
